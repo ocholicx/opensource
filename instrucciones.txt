@@ -1,0 +1,19 @@
+************Creating virtual machines and get up two or much services by OCHOLICX *******************
+Para conectar dos maquinas virtuales vamos a instalar algunos paquetes qemu-kmv” , “libvirt-bin” , “virt-viwer” .
+Los paquetes que acobo de mensionar sirven para levantar la maquina virtual en quemu , el virtviwer es para la interface grafica
+Para instalar los paquetes usamos el comando "apt-get install" or "yum" dependiendo de que distrubucion estes usando, yo ultilice el Ubuntu.
+Para conectar las dos maquinas virtuales instalamos el paquete llamado “bridge-ultils” que sirve para crear una tarjeta nic punte 
+Una interface nic puente es una interface virtual que comparte una dirrecion IP del mismo rango que tienes en la red local.
+Ya que tienes instalado el 0S en la maquina virtual checamos que tengan IP del mismo rango y hacer ping entre ellas.
+Para hacer ping entre ellas usamos el comando "ping + ip".
+Ya una vez que tengamos cominicacion hora procedemos a probar los servicios.
+Para pobrar los servicios ssh es con el comando "ssh +  ip"  , y ftp + ip ,mysql +ip. 
+servicio de apache se proba abrindo un navegador y poniendo la url "127.0.0.1" o "localhost".
+Nota: Para instalar todos los servicios es por terminal para abrir una termina en ubuntu das click en el primer icono y te parecera,
+una ventana tecleas terminal listo tendras una terminal , para instalar los paquetes se instalan solamente con root. 
+Para acceder a root es con el comando su -i. ya despues puedues teclear los camando mostrados anteriormente
+
+virt-install --connect=qemu:///system --name=vm1 --ram=512 --vcpus=1 --check-cpu --os-type=linux --hvm --vnc --accelerate --disk=/home/ocholicx/linux_mint.img,size=8,$
+virt-install --connect=qemu:///system --name=vm2 --ram=1024 --vcpus=1 --check-cpu --os-type=linux --hvm --vnc --accelerate --disk=/home/ocholicx/fedora.img,size=8,spa$
+
+and add files to continue

@@ -1,0 +1,2 @@
+-virt-install --connect=qemu:///system --name=vm1 --ram=512 --vcpus=1 --check-cpu --os-type=linux --hvm --vnc --accelerate --disk=/home/ocholicx/linux_mint.img,size=8,sparse=true --cdrom=/home/ocholicx/Downloads/Linux_mint-x86_64.iso 
++virt-install --connect=qemu:///system --name=vm2 --ram=1024 --vcpus=1 --check-cpu --os-type=linux --hvm --vnc --accelerate --disk=/home/ocholicx/fedora.img,size=8,sparse=true --cdrom=/home/ocholicx/Downloads/CentOS-7.2-x86_64-Minimal-1511.iso 
